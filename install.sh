@@ -1,8 +1,10 @@
 #!/bin/bash
-if [[ $(lsb_release -cs) == "xenial" ]]; then # replace 8.04 by the number of release you want
+if [[ $(lsb_release -cs) == "xenial" ]]
+then
     wget https://repo.zabbix.com/zabbix/4.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.4-1+xenialll.deb
     dpkg -i zabbix-release_4.4-1+xenial_all.deb
-elif [[ $(lsb_release -cs) == "bionic" ]]; then
+elif [[ $(lsb_release -cs) == "bionic" ]]
+then
     wget https://repo.zabbix.com/zabbix/4.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.4-1+bionic_all.deb
     dpkg -i zabbix-release_4.4-1+bionic_all.deb
 else
