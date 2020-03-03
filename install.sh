@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ $(lsb_release -cs) = "xenial" ]
 then
     wget -O - "https://repo.zabbix.com/zabbix/4.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.4-1+xenial_all.deb"
