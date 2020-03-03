@@ -1,5 +1,5 @@
 ### Prerequisites
-apt -y install curl
+`apt -y install curl`
 
 ### Supports
 Ubuntu Xenial & Bionic
