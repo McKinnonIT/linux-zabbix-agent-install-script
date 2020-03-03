@@ -13,10 +13,10 @@ else
 fi
 
 curl "https://raw.githubusercontent.com/scv-m/linux-zabbix-agent-install-script/master/zabbix_agentd.conf" > /etc/zabbix/zabbix_agentd.conf
-apt update && sudo apt -y install zabbix-agent
-sudo service zabbix-agent start
+apt update && apt -y install zabbix-agent
+service zabbix-agent start
 
-if sudo service zabbix-agent start
+if service zabbix-agent start
 then
     systemctl status zabbix-agent
 fi
