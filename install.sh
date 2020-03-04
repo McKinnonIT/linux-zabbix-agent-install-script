@@ -18,7 +18,7 @@ apt update && apt -y install zabbix-agent
 curl "https://raw.githubusercontent.com/scv-m/linux-zabbix-agent-install-script/master/zabbix_agentd.conf" > /tmp/zabbix_agentd.conf
 mv /tmp/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
 
-if service zabbix-agent start
+if service zabbix-agent restart
 then
     systemctl status zabbix-agent
 fi
