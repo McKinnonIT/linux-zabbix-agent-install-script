@@ -10,7 +10,7 @@ then
 elif [ $(lsb_release -cs) = "stretch" ]
 then
     curl -O https://repo.zabbix.com/zabbix/4.0/debian/pool/main/z/zabbix-release/zabbix-release_4.0-3+stretch_all.deb
-    dpkg -i zabbix-release_4.4-1+stretch_all.deb
+    dpkg -i zabbix-release_4.0-3+stretch_all.deb
 else
     echo "Non-compatible release"
     exit
