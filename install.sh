@@ -19,13 +19,13 @@ fi
 
 
 apt update && apt -y install zabbix-agent
+mkdir /etc/zabbix/zabbix_agent.d
+
 curl "https://raw.githubusercontent.com/scv-m/linux-zabbix-agent-install-script/master/zabbix_agentd.conf" > /tmp/zabbix_agentd.conf
 curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_disk_performance.conf" > /etc/zabbix/zabbix_agent.d/os_linux_disk_performance.conf
-curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_memory.conf" > /tmp/os_linux_memory.conf
-curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_network.conf" > /tmp/os_linux_network.conf
+curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_memory.conf" > /etc/zabbix/zabbix_agent.d/os_linux_memory.conf
+curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_network.conf" > /etc/zabbix/zabbix_agent.d/os_linux_network.conf
 
-mkdir /etc/zabbix/zabbix_agent.d
-# mv /tmp/{os_linux_disk_performance.conf,os_linux_memory.conf,os_linux_network.conf} /etc/zabbix/zabbix_agent.d/
 mv /tmp/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
 
 if service zabbix-agent restart
