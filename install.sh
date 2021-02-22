@@ -11,6 +11,9 @@ elif [ $(lsb_release -cs) = "stretch" ]
 then
     curl -O https://repo.zabbix.com/zabbix/4.0/debian/pool/main/z/zabbix-release/zabbix-release_4.0-3+stretch_all.deb
     dpkg -i zabbix-release_4.0-3+stretch_all.deb
+elif [ $(lsb_release -cs) = "focal" ]
+    curl -O https://repo.zabbix.com/zabbix/5.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.2-1+ubuntu20.04_all.deb
+    dpkg -i zabbix-release_5.2-1+ubuntu20.04_all.deb
 else
     echo "Non-compatible release"
     exit
