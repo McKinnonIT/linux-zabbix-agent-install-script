@@ -15,8 +15,8 @@ elif [ $(lsb_release -cs) = "focal" ]
 then
     curl -O https://repo.zabbix.com/zabbix/5.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.2-1+ubuntu20.04_all.deb
     dpkg -i zabbix-release_5.2-1+ubuntu20.04_all.deb
-elif
-then [ $(lsb_release -cs) = "jammy" ]
+elif [ $(lsb_release -cs) = "jammy" ]
+then
     curl -O https://repo.zabbix.com/zabbix/5.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.2-1+ubuntu20.04_all.deb
     dpkg -i zabbix-release_5.2-1+ubuntu20.04_all.deb
 else
