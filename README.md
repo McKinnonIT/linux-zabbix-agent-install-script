@@ -23,7 +23,7 @@ You must have superuser privileges to execute the installation commands successf
 ## One-liner
 
 ```sh
-sudo apt update; sudo apt -y install curl; curl -sL https://raw.githubusercontent.com/scv-m/linux-zabbix-agent-install-script/master/install.sh | sudo sh
+sudo apt update; sudo apt -y install curl; curl -sL https://raw.githubusercontent.com/scv-m/linux-zabbix-agent-install-script/master/install.sh | sudo bash
 ```
 
 ## Installation
