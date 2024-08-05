@@ -23,7 +23,7 @@ You must have superuser privileges to execute the installation commands successf
 ## One-liner
 
 ```sh
-sudo apt update; sudo apt -y install curl; curl -sL https://github.com/McKinnonIT/linux-zabbix-agent-install-script/blob/master/install.sh | sudo bash
+sudo apt update; sudo apt -y install curl; curl -sL https://raw.githubusercontent.com/McKinnonIT/linux-zabbix-agent-install-script/master/install.sh | sudo bash
 ```
 
 ## Installation
@@ -31,7 +31,7 @@ sudo apt update; sudo apt -y install curl; curl -sL https://github.com/McKinnonI
 1. Download the script to your local machine. You can do this by creating a new file and copying the content of the script into it or by using the `wget` or `curl` command to download the script directly from a repository.
 
     ```sh
-    curl -O https://github.com/McKinnonIT/linux-zabbix-agent-install-script/blob/master/install.sh
+    curl -O https://raw.githubusercontent.com/McKinnonIT/linux-zabbix-agent-install-script/master/install.sh
     ```
 
 2. Make the script executable:
