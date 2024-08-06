@@ -75,6 +75,12 @@ curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operatin
 curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_memory.conf" > /etc/zabbix/zabbix_agent.d/os_linux_memory.conf
 curl "https://raw.githubusercontent.com/itmicus/zabbix/master/Templates/Operating%20Systems/Linux/os_linux_network.conf" > /etc/zabbix/zabbix_agent.d/os_linux_network.conf
 
+# Create a timestamped backup of the existing Zabbix agent configuration file
+if [ -f /etc/zabbix/zabbix_agentd.conf ]; then
+    timestamp=$(date +%Y%m%d%H%M%S)
+    cp /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf.bak.$timestamp
+fi
+
 # Move the main Zabbix agent configuration file
 mv /tmp/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
 
